@@ -1,8 +1,14 @@
 import React,{Component} from 'react';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NavBar from './shared/NavBar.jsx';
 
 class App extends Component{
 
+	getChildContext() {
+		return {
+			muiTheme: getMuiTheme()
+		};
+	}
 	render(){
 		return(
 
@@ -12,6 +18,11 @@ class App extends Component{
 				</div>
 			)
 	}
+
 }
+
+App.childContextTypes = {
+	muiTheme: React.PropTypes.object.isRequired,
+};
 
 export default App;
