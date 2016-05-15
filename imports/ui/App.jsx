@@ -51,7 +51,6 @@ class App extends Component {
 
 
     handleTouchTap() {
-        debugger
         this.refs.drawer.handleToggle();
     }
 
